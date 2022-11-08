@@ -1,10 +1,9 @@
-const movieContainer = document.getElementById('movie-container');
-
-async function getAllMovies() {
+(async function getAllMovies() {
+    const movieContainer = document.getElementById('movie-container');
     try {
         const loadWrapper = document.createElement('div');
         loadWrapper.innerHTML = '<br>Loading... <br><br>';
-        movieContainer.appendChild(loadWrapper);  
+        movieContainer.appendChild(loadWrapper);
 
         const getAllMovies = await axios.get(`http://localhost:3000/api/movies`);
 
@@ -71,6 +70,4 @@ async function getAllMovies() {
         errorWrapper.innerHTML = '<br>Maaf Coba Beberapa Saat Lagi... <br><br>';
         movieContainer.appendChild(errorWrapper);   
     }
-}
-
-getAllMovies();
+})();
