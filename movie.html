@@ -4,11 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Detail</title>
     <link rel="stylesheet" href="css/movie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="backButton">
+                <i class="fa fa-angle-left backIcon" style="font-size:26px;line-height: 1.25;"></i>
+                <span class="backText">Back</span>
+            </a>
+            <div id="headerTitle"></div>
+            <div class="right"></div>
+        </div>
+        <div class="posterContainer">
+            <div id="poster"></div>
+            <div id="titleDesc"></div>
+        </div>
+        <div class="overviewHead">
+            Overview
+        </div>
+        <div class="overviewBody">
+            <div id="overviewText"></div>
+            <div class="tables">
+                <table id="dirTable" class="table"></table>
+                <table id="writerTable" class="table"></table>
+                <table id="castTable" class="table"></table>
+            </div>
+        </div>
+    </div>
     <script src="js/movie.js"></script>
 </body>
 </html>

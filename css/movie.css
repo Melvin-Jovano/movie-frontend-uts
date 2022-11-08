@@ -1,0 +1,121 @@
+body{
+    background-color: whitesmoke;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    min-width: 420px;
+}
+
+.header{
+    display: flex;
+    padding: 5px;
+    vertical-align: middle;
+    line-height: 2;
+    border-bottom: solid 1px lightgray;
+    align-items: center;
+    background-color: #ededed;
+}
+
+.backButton{
+    display: flex;
+    text-decoration: none;
+    width: fit-content;
+    vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.backIcon{ 
+    color: #1979a9;
+}
+
+.backText{
+    font-size: 16px; 
+    margin-left: 3px; 
+    color: #1979a5;
+}
+
+.backButton, .right{
+    flex: 1;
+    padding: 5px;
+}
+
+#headerTitle{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.posterContainer{
+    padding: 10px;
+}
+
+#poster{
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.posterImg{
+    width: 150px;
+    height: auto;
+}
+
+.div1, .div2{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding-top: 5px;
+    font-size: 14px;
+}
+
+.div2{
+    padding-top: 0;
+    color: gray;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.overviewHead{
+    padding: 5px 20px;
+    background-color: #e0e0e0;
+    font-size: 15px;
+}
+
+.overviewBody{
+    padding: 20px 20px 5px;
+}
+
+.tables{
+    width: 100%;
+}
+
+.table{
+    margin-top: 25px;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    /* width: 100%; */
+    flex-wrap: wrap;
+}
+
+.tdBox{
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.textMute{
+    color: gray;
+    font-size: 14px;
+}
