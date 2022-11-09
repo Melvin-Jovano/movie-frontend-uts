@@ -16,13 +16,13 @@ function getMovieById(){
         if(response.data.message !== "Success"){
             throw Error();
         }else{
-            const movieData = response.data.data
-            const releaseYear = movieData["release_date"].split("-")[0]
+            const movie = response.data.data
+            const releaseYear = movie["release_date"].split("-")[0]
 
-            headerTitle.innerHTML = movieData["title"]
+            headerTitle.innerHTML = movie["title"]
 
             const img = document.createElement('img')
-            img.src = `https://image.tmdb.org/t/p/w92${movieData["poster_path"]}`
+            img.src = `https://image.tmdb.org/t/p/w92${movie["poster_path"]}`
             img.classList.add("posterImg")
             poster.appendChild(img)
 
@@ -30,7 +30,7 @@ function getMovieById(){
             div1.classList.add("div1")
 
             const title = document.createElement("span")
-            title.innerHTML = movieData["title"]
+            title.innerHTML = movie["title"]
             title.classList.add("title")
             div1.appendChild(title)
 
@@ -41,16 +41,16 @@ function getMovieById(){
             titleDesc.appendChild(div1)
 
             const div2 = document.createElement("div")
-            div2.innerHTML = `${movieData["certification"]} | ${movieData["release_date"]} | ${movieData["original_language"]}`
+            div2.innerHTML = `${movie["certification"]} | ${movie["release_date"]} | ${movie["original_language"]}`
             div2.classList.add("div2")
 
             titleDesc.appendChild(div2)
 
-            overview.innerHTML = movieData["overview"]
+            overview.innerHTML = movie["overview"]
 
             const trDir = document.createElement("tr")
             trDir.classList.add("row")
-            movieData["directors"].forEach((data) => {
+            movie["directors"].forEach((data) => {
                 const td = document.createElement("td")
                 td.innerHTML = `${data["name"]} <br> <span class="textMute">Director</span>`
                 td.classList.add("tdBox")
@@ -60,7 +60,7 @@ function getMovieById(){
 
             const trWriter = document.createElement("tr")
             trWriter.classList.add("row")
-            movieData["writers"].forEach((data) => {
+            movie["writers"].forEach((data) => {
                 const td = document.createElement("td")
                 td.innerHTML = `${data["name"]} <br> <span class="textMute">Writer</span>`
                 td.classList.add("tdBox")
@@ -70,7 +70,7 @@ function getMovieById(){
 
             const trCast = document.createElement("tr")
             trCast.classList.add("row")
-            movieData["cast"].forEach((data) => {
+            movie["cast"].forEach((data) => {
                 const td = document.createElement("td")
                 td.innerHTML = `${data["name"]} <br> <span class="textMute">Cast</span>`
                 td.classList.add("tdBox")
