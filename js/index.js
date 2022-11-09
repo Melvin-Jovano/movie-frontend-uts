@@ -11,7 +11,9 @@
         
         movieContainer.innerHTML = '';
 
-        getAllMovies.data.data.forEach(movie => {
+        const movies = getAllMovies.data.data;
+
+        movies.forEach(movie => {
             const a = document.createElement('a');
             a.setAttribute('class', 'text-decoration-none');
             a.href = `movie.html?id=${movie.id}`;
