@@ -3,6 +3,10 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#error {
+    display: none;
+}
+
 .container{
     background-color: white;
     margin-left: auto;
