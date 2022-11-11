@@ -5,6 +5,7 @@ body{
 
 #error {
     display: none;
+    padding-left: 15px;
 }
 
 .container{
